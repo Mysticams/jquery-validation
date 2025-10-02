@@ -63,29 +63,6 @@ select {
     cursor: pointer;
 }
 
-.checkbox-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    text-align: left;
-}
-
-.checkbox {
-    width: 20px;
-    height: 20px;
-    border: 3px solid #000000;
-    background: #FFFFFF;
-    margin-right: 10px;
-    cursor: pointer;
-    position: relative;
-}
-
-.checkbox-label {
-    font-size: 0.4rem;
-    color: #000000;
-    cursor: pointer;
-}
-
 .btn {
     width: 100%;
     padding: 15px;
@@ -145,5 +122,34 @@ select.error {
 
     75% {
         transform: translateX(5px);
+    }
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox-group .checkbox-label {
+    font-size: 0.8rem;
+}
+
+@media (max-width: 400px) {
+    .checkbox-group {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .checkbox-group .checkbox-label {
+        font-size: 0.7rem;
+        white-space: normal;
     }
 }
