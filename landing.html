@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mario World - Welcome to the Mushroom Kingdom!</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="landing.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container text-center mt-5">
+        <h2 id="welcomeMsg"></h2>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">SUPER MARIO WORLD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#characters">HEROES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#powerups">POWER-UPS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#worlds">WORLDS</a></li>
+                    <li class="nav-item">
+                        <button id="logoutBtn" class="btn btn-danger btn-sm ms-3">LOGOUT</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title">IT'S-A ME, MARIO!</h1>
+                    <p class="hero-subtitle">WELCOME TO THE MUSHROOM KINGDOM</p>
+                    <p class="lead mb-4">Join Mario and friends on the ultimate 8-bit adventure through magical worlds
+                        filled with coins, power-ups, and endless fun! Let's-a go save Princess Peach!</p>
+                    <a href="#characters" class="btn btn-mario btn-lg me-3">START GAME</a>
+                    <a href="#worlds" class="btn btn-outline-primary btn-lg">SELECT WORLD</a>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <img src="img/mushroom.png" alt="Super Mushroom"
+                        style="width: 120px; height: 120px; border: 4px solid var(--pixel-black); margin: 0 auto 2rem; display: block; image-rendering: pixelated;"
+                        onerror="this.src=''; this.alt='Super Mushroom'; this.style.display='none';">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="img/coin.png" alt="Coin"
+                                style="width: 60px; height: 60px; border: 2px solid var(--pixel-black); margin: 0 auto; display: block; image-rendering: pixelated;"
+                                onerror="this.src=''; this.alt='Coin'; this.style.display='none';">
+                        </div>
+                        <div class="col-4">
+                            <img src="img/star.png" alt="Super Star"
+                                style="width: 60px; height: 60px; border: 2px solid var(--pixel-black); margin: 0 auto; display: block; image-rendering: pixelated;"
+                                onerror="this.src=''; this.alt='Super Star'; this.style.display='none';">
+                        </div>
+                        <div class="col-4">
+                            <img src="img/fireflower.png" alt="Fire Flower"
+                                style="width: 60px; height: 60px; border: 2px solid var(--pixel-black); margin: 0 auto; display: block; image-rendering: pixelated;"
+                                onerror="this.src=''; this.alt='Fire Flower'; this.style.display='none';">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Characters Section -->
+    <section id="characters" class="py-5"
+        style="background: repeating-linear-gradient(90deg, var(--pixel-white) 0px, var(--pixel-white) 20px, #F0F0F0 20px, #F0F0F0 40px);">
+        <div class="container">
+            <h2 class="section-title">MEET THE HEROES</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="character-card">
+                        <img src="img/supermario.png" alt="Mario"
+                            style="width: 80px; height: 80px; margin: 0 auto 1rem; border: 2px solid var(--pixel-black); display: block; image-rendering: pixelated;"
+                            onerror="this.src=''; this.alt='Mario'; this.style.display='none';">
+                        <h4 class="character-name">MARIO</h4>
+                        <p class="character-desc">The legendary plumber hero of the Mushroom Kingdom, always ready to
+                            save the day with his jumping skills!</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="character-card">
+                        <img src="img/luigi.webp" alt="Luigi"
+                            style="width: 80px; height: 80px; margin: 0 auto 1rem; border: 2px solid var(--pixel-black); display: block; image-rendering: pixelated;"
+                            onerror="this.src=''; this.alt='Luigi'; this.style.display='none';">
+                        <h4 class="character-name">LUIGI</h4>
+                        <p class="character-desc">Mario's brave brother who jumps higher and runs faster through every
+                            8-bit adventure in the kingdom!</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="character-card">
+                        <img src="img/peach.webp" alt="Princess Peach"
+                            style="width: 80px; height: 80px; margin: 0 auto 1rem; border: 2px solid var(--pixel-black); display: block; image-rendering: pixelated;"
+                            onerror="this.src=''; this.alt='Princess Peach'; this.style.display='none';">
+                        <h4 class="character-name">PRINCESS PEACH</h4>
+                        <p class="character-desc">The kind ruler of the Mushroom Kingdom with magical powers and a
+                            caring heart for all her subjects!</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="character-card">
+                        <img src="img/bowser.webp" alt="Bowser"
+                            style="width: 80px; height: 80px; margin: 0 auto 1rem; border: 2px solid var(--pixel-black); display: block; image-rendering: pixelated;"
+                            onerror="this.src=''; this.alt='Bowser'; this.style.display='none';">
+                        <h4 class="character-name">BOWSER</h4>
+                        <p class="character-desc">The King of Koopas! A formidable 8-bit boss with fire breath and a
+                            spiky shell armor!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Power-Ups Section -->
+    <section id="powerups" class="py-5"
+        style="background: repeating-linear-gradient(0deg, var(--pixel-black) 0px, var(--pixel-black) 12px, #333333 12px, #333333 24px);">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--pixel-yellow);">MAGICAL POWER-UPS</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="powerup-card">
+                        <img src="img/supermushroom.png" alt="Super Mushroom"
+                            style="width: 60px; height: 60px; margin: 0 auto 1rem; border: 2px solid var(--pixel-white); display: block; image-rendering: pixelated;"
+                            onerror="this.src=''; this.alt='Super Mushroom (image failed to load)'; this.style.display='none';">
+                        <h5 class="powerup-title">SUPER MUSHROOM</h5>
+                        <p class="powerup-desc">Grow bigger and stronger! Break blocks and take extra hits in classic
+                            8-bit style!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="powerup-card">
+                        <img src="img/fireflower.png" alt="Fire Flower"
+                            style="width: 60px; height: 60px; margin: 0 auto 1rem; border: 2px solid var(--pixel-white); display: block; image-rendering: pixelated;"
+                            onerror="this.src=''; this.alt='Fire Flower (image failed to load)'; this.style.display='none';">
+                        <h5 class="powerup-title">FIRE FLOWER</h5>
+                        <p class="powerup-desc">Shoot pixelated fireballs and defeat enemies from a safe distance!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="powerup-card">
+                        <img src="img/star.png" alt="Super Star"
+                            style="width: 60px; height: 60px; margin: 0 auto 1rem; border: 2px solid var(--pixel-white); display: block; image-rendering: pixelated;"
+                            onerror="this.src=''; this.alt='Super Star (image failed to load)'; this.style.display='none';">
+                        <h5 class="powerup-title">SUPER STAR</h5>
+                        <p class="powerup-desc">Become invincible! Run through enemies and obstacles with 8-bit power!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="powerup-card">
+                        <img src="img/coin.png" alt="Coin"
+                            style="width: 60px; height: 60px; margin: 0 auto 1rem; border: 2px solid var(--pixel-white); display: block; image-rendering: pixelated;"
+                            onerror="this.src=''; this.alt='Coin (image failed to load)'; this.style.display='none';">
+                        <h5 class="powerup-title">COINS</h5>
+                        <p class="powerup-desc">Collect 100 coins to earn an extra life! Classic arcade scoring system!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="powerup-card">
+                        <img src="img/cape.png" alt="Cape Feather"
+                            style="width: 60px; height: 60px; margin: 0 auto 1rem; border: 2px solid var(--pixel-white); display: block; image-rendering: pixelated;"
+                            onerror="this.src=''; this.alt='Cape Feather (image failed to load)'; this.style.display='none';">
+                        <h5 class="powerup-title">CAPE FEATHER</h5>
+                        <p class="powerup-desc">Soar through pixelated skies and glide over dangerous obstacles!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="powerup-card">
+                        <img src="img/1up.png" alt="1-Up Mushroom"
+                            style="width: 60px; height: 60px; margin: 0 auto 1rem; border: 2px solid var(--pixel-white); display: block; image-rendering: pixelated;"
+                            onerror="this.src=''; this.alt='1-Up Mushroom (image failed to load)'; this.style.display='none';">
+                        <h5 class="powerup-title">1-UP MUSHROOM</h5>
+                        <p class="powerup-desc">Gain an extra life! The green mushroom of hope in 8-bit adventures!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Worlds Section -->
+    <section id="worlds" class="world-section">
+        <div class="container">
+            <h2 class="section-title text-white text-center mb-5">EXPLORE 8-BIT WORLDS</h2>
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="world-card text-center">
+                        <img src="img/grassland.png" alt="Grass Land"
+                            style="width:60px; height:60px; margin-bottom:1rem;">
+                        <h4 class="world-title">GRASS LAND</h4>
+                        <p class="world-desc">Rolling green hills, blue skies, and classic 8-bit Mario platforming
+                            action!</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="world-card text-center">
+                        <img src="img/desserthill.png" alt="Desert Hill"
+                            style="width:60px; height:60px; margin-bottom:1rem;">
+                        <h4 class="world-title">DESERT HILL</h4>
+                        <p class="world-desc">Sandy dunes, ancient pyramids, and quicksand challenges await!</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="world-card text-center">
+                        <img src="img/waterland.png" alt="Water Land"
+                            style="width:60px; height:60px; margin-bottom:1rem;">
+                        <h4 class="world-title">WATER LAND</h4>
+                        <p class="world-desc">Dive into underwater adventures with classic swimming mechanics!</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="world-card text-center">
+                        <img src="img/giantland.png" alt="Giant Land"
+                            style="width:60px; height:60px; margin-bottom:1rem;">
+                        <h4 class="world-title">GIANT LAND</h4>
+                        <p class="world-desc">Everything is supersized! Navigate through enormous obstacles!</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="world-card text-center">
+                        <img src="img/skyland.png" alt="Sky Land" style="width:60px; height:60px; margin-bottom:1rem;">
+                        <h4 class="world-title">SKY LAND</h4>
+                        <p class="world-desc">Jump between clouds high above the Mushroom Kingdom!</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="world-card text-center">
+                        <img src="img/darkland.png" alt="Dark Land"
+                            style="width:60px; height:60px; margin-bottom:1rem;">
+                        <h4 class="world-title">DARK LAND</h4>
+                        <p class="world-desc">Bowser's volcanic fortress! The ultimate challenge awaits!</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>SUPER MARIO WORLD</h5>
+                    <p>Join Mario on the greatest 8-bit adventure in the Mushroom Kingdom! Collect coins, defeat
+                        enemies, and save Princess Peach in classic pixel style!</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>GAME FEATURES</h5>
+                    <p class="mb-2">• Classic 8-bit platforming action</p>
+                    <p class="mb-2">• Multiple pixelated characters</p>
+                    <p class="mb-2">• Exciting retro power-ups</p>
+                    <p class="mb-2">• Colorful pixel art worlds</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>HIGH SCORES</h5>
+                    <p class="mb-1">WORLD RECORD: 9,999,999 PTS</p>
+                    <p class="mb-1">SPEED RUN: 4:56.878</p>
+                    <p class="mb-1">100% COMPLETE: 2:15:33</p>
+                    <p class="mb-1">COINS COLLECTED: INFINITE</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">© 2025 SUPER MARIO WORLD. LET'S-A GO!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

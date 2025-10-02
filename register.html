@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mario Register</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="register.css" rel="stylesheet">
+  <script src="register.js" defer></script>
+
+</head>
+
+<body>
+  <div class="register-box">
+    <div class="mario-head"></div>
+    <h1>MARIO REGISTER</h1>
+
+    <form id="registerForm">
+      <div class="form-group">
+        <label>PLAYER NAME:</label>
+        <input type="text" name="username" placeholder="Enter username">
+      </div>
+
+      <div class="form-group">
+        <label>EMAIL:</label>
+        <input type="email" name="email" placeholder="Enter email">
+      </div>
+
+      <div class="form-group">
+        <label>PASSWORD:</label>
+        <input type="password" name="password" id="password" placeholder="Enter password">
+      </div>
+
+      <div class="form-group">
+        <label>CONFIRM PASSWORD:</label>
+        <input type="password" name="confirm_password" placeholder="Confirm password">
+      </div>
+
+      <div class="form-group">
+        <label>CHOOSE CHARACTER:</label>
+        <select name="character">
+          <option value="">Select your hero</option>
+          <option value="mario">Mario</option>
+          <option value="luigi">Luigi</option>
+          <option value="peach">Princess Peach</option>
+        </select>
+      </div>
+
+      <div class="checkbox-group">
+        <input type="checkbox" name="terms" value="1">
+        <label class="checkbox-label">I agree to the Super Mario terms</label>
+      </div>
+
+      <button type="submit" class="btn">CREATE PLAYER</button>
+    </form>
+
+    <div class="success-message" style="display:none;">🎉 Registration successful! You can now log in.</div>
+
+    <div class="login-link">
+      Already have an account? <a href="index.html"> Login here</a>
+    </div>
+  </div>
+
+</body>
+
+</html>

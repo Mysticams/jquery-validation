@@ -1,0 +1,149 @@
+* {
+    font-family: 'Press Start 2P', monospace;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url('img/mario.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.register-box {
+    background: #FFFFFF;
+    border: 4px solid #000000;
+    padding: 2rem;
+    box-shadow: 8px 8px 0 #808080;
+    width: 400px;
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 1rem;
+    color: #FF0000;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 0.5rem;
+    color: #000000;
+    margin-bottom: 0.5rem;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.6rem;
+    background: #FFFFFF;
+    border: 3px solid #000000;
+    color: #000000;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #0000FF;
+}
+
+select {
+    cursor: pointer;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #000000;
+    background: #FFFFFF;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox-label {
+    font-size: 0.4rem;
+    color: #000000;
+    cursor: pointer;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 0.7rem;
+    background: #00FF00;
+    border: 3px solid #000000;
+    color: #000000;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background: #00CC00;
+}
+
+.login-link {
+    margin-top: 1rem;
+    font-size: 0.4rem;
+    color: #0000FF;
+}
+
+.login-link a {
+    color: #0000FF;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    color: #FF0000;
+    text-decoration: underline;
+}
+
+label.error {
+    color: #ff4444;
+    font-size: 10px;
+    display: block;
+    margin-top: 5px;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+input.error,
+select.error {
+    border: 2px solid #ff4444 !important;
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
